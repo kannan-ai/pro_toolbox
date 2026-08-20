@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">ప్రో టూల్‌బాక్స్</string>
+    <string name="title_text_studio">టెక్స్ట్ స్టూడియో</string>
+    <string name="title_emi">ఈఎంఐ కాలిక్యులేటర్</string>
+    <string name="title_currency">కరెన్సీ</string>
+    <string name="title_quick_calc">త్వరిత గణనలు</string>
+    <string name="title_qr">క్యూఆర్ కోడ్</string>
+    <string name="title_measurement">కొలత</string>
+    <string name="title_password">పాస్‌వర్డ్ జెన్</string>
+    <string name="title_history">చరిత్ర</string>
+    <string name="title_settings">సెట్టింగ్‌లు</string>
+    <string name="title_media_studio">క్రియేటివ్ స్టూడియో</string>
+    <string name="title_video_editor">వీడియో ఎడిటర్</string>
+    <string name="title_creations">సృజనలు</string>
+    <string name="title_video_player">వీడియో ప్లేయర్</string>
+    <string name="title_music_player">మ్యూజిక్ ప్లేయర్</string>
+    <string name="title_system_health">സിസ്റ്റം ഹെൽത്ത്</string>
+    <string name="title_text_to_audio">టెక్స్ట్ నుండి ఆడియో</string>
+    <string name="title_file_transfer">ఫాస్ట్ షేర్</string>
+    <string name="title_support_bot">స్వరా బాట్</string>
+    <string name="title_smart_price_hub">స్మార్ట్ ధర హబ్</string>
+    <string name="title_app_manager">యాప్ మేనేజర్</string>
+
+    <string name="label_dark_mode">డార్క్ మోడ్</string>
+    <string name="label_display_language">యాప్ ప్రదర్శన భాష</string>
+    <string name="label_pin_tools">టూల్స్‌ను పైన పిన్ చేయండి</string>
+    <string name="label_recent_updates">ఇటీవలి అప్‌డేట్‌లు</string>
+    <string name="label_calculation_history">గణన చరిత్ర</string>
+    <string name="label_no_history">ఇంకా చరిత్ర లేదు</string>
+</resources>

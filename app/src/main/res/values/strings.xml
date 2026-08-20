@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Pro Toolbox</string>
+    <string name="title_text_studio">Text Studio</string>
+    <string name="title_currency">Currency Converter</string>
+    <string name="title_quick_calc">Quick Calculator</string>
+    <string name="title_qr">QR Code Hub</string>
+    <string name="title_measurement">Unit Converter</string>
+    <string name="title_password">Password Generator</string>
+    <string name="title_history">History</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_media_studio">Creative Studio</string>
+    <string name="title_video_editor">Video Editor</string>
+    <string name="title_creations">Creations</string>
+    <string name="title_video_player">Video Player</string>
+    <string name="title_music_player">Music Player</string>
+    <string name="title_system_health">System Health</string>
+    <string name="title_text_to_audio">Text to Audio</string>
+    <string name="title_file_transfer">Fast Transfer</string>
+    <string name="title_support_bot">Swara Bot</string>
+    <string name="title_smart_price_hub">Smart Price Hub</string>
+    <string name="title_app_manager">App Manager</string>
+
+    <string name="label_dark_mode">Dark Mode</string>
+    <string name="label_display_language">App Display Language</string>
+    <string name="label_pin_tools">Pin Tools to Top</string>
+    <string name="label_recent_updates">Recent Updates</string>
+    <string name="label_calculation_history">Calculation History</string>
+    <string name="label_no_history">No history yet</string>
+</resources>

@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">प्रो टूलबॉक्स</string>
+    <string name="title_text_studio">टेक्स्ट स्टूडियो</string>
+    <string name="title_emi">ईएमआई कैलकुलेटर</string>
+    <string name="title_currency">मुद्रा</string>
+    <string name="title_quick_calc">त्वरित गणना</string>
+    <string name="title_qr">क्यूआर कोड</string>
+    <string name="title_measurement">मापन</string>
+    <string name="title_password">पासवर्ड जेन</string>
+    <string name="title_history">इतिहास</string>
+    <string name="title_settings">सेटिंग्स</string>
+    <string name="title_media_studio">क्रिएटिव स्टूडियो</string>
+    <string name="title_video_editor">वीडियो एडिटर</string>
+    <string name="title_creations">कृतियां</string>
+    <string name="title_video_player">वीडियो प्लेयर</string>
+    <string name="title_music_player">म्यूज़िक प्लेयर</string>
+    <string name="title_system_health">सिस्टम स्वास्थ्य</string>
+    <string name="title_text_to_audio">टेक्स्ट टू ऑडियो</string>
+    <string name="title_file_transfer">फास्ट शेयर</string>
+    <string name="title_support_bot">स्वरा बॉट</string>
+    <string name="title_smart_price_hub">स्मार्ट प्राइस हब</string>
+    <string name="title_app_manager">ऐप मैनेजर</string>
+
+    <string name="label_dark_mode">डार्क मोड</string>
+    <string name="label_display_language">ऐप की भाषा</string>
+    <string name="label_pin_tools">टूल को ऊपर पिन करें</string>
+    <string name="label_recent_updates">हाल के अपडेट</string>
+    <string name="label_calculation_history">गणना इतिहास</string>
+    <string name="label_no_history">अभी तक कोई इतिहास नहीं</string>
+</resources>

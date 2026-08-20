@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">புரோ டூல்பாக்ஸ்</string>
+    <string name="title_text_studio">டெக்ஸ்ட் ஸ்டுடியோ</string>
+    <string name="title_emi">இஎம்ஐ கால்குலேட்டர்</string>
+    <string name="title_currency">நாணயம்</string>
+    <string name="title_quick_calc">விரைவு கணக்கீடு</string>
+    <string name="title_qr">QR குறியீடு</string>
+    <string name="title_measurement">அளவீடு</string>
+    <string name="title_password">கடவுச்சொல் ஜென்</string>
+    <string name="title_history">வரலாறு</string>
+    <string name="title_settings">அமைப்புகள்</string>
+    <string name="title_media_studio">கிரியேட்டிவ் ஸ்டுடியோ</string>
+    <string name="title_video_editor">வீடியோ எடிட்டர்</string>
+    <string name="title_creations">படைப்புகள்</string>
+    <string name="title_video_player">வீடியோ பிளேயர்</string>
+    <string name="title_music_player">மியூசிக் பிளேயர்</string>
+    <string name="title_system_health">கணினி ஆரோக்கியம்</string>
+    <string name="title_text_to_audio">உரையிலிருந்து ஆடியோ</string>
+    <string name="title_file_transfer">பாஸ்ட் ஷேர்</string>
+    <string name="title_support_bot">சுவரா பாட்</string>
+    <string name="title_smart_price_hub">ஸ்மார்ட் விலை மையம்</string>
+    <string name="title_app_manager">பயன்பாட்டு மேலாளர்</string>
+
+    <string name="label_dark_mode">இருண்ட பயன்முறை</string>
+    <string name="label_display_language">செயலி காட்சி மொழி</string>
+    <string name="label_pin_tools">கருவிகளை மேலே பின் செய்யவும்</string>
+    <string name="label_recent_updates">சமீபத்திய புதுப்பிப்புகள்</string>
+    <string name="label_calculation_history">கணக்கீட்டு வரலாறு</string>
+    <string name="label_no_history">இன்னும் வரலாறு இல்லை</string>
+</resources>

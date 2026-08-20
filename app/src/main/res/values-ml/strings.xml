@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">പ്രോ ടൂൾബോക്സ്</string>
+    <string name="title_text_studio">ടെക്സ്റ്റ് സ്റ്റുഡിയോ</string>
+    <string name="title_emi">ഇഎംഐ കാൽക്കുലേറ്റർ</string>
+    <string name="title_currency">കറൻസി</string>
+    <string name="title_quick_calc">ക്വിക്ക് കാൽക്സ്</string>
+    <string name="title_qr">ക്യുആർ കോഡ്</string>
+    <string name="title_measurement">മെഷർമെന്റ്</string>
+    <string name="title_password">പാസ്‌വേഡ് ജെൻ</string>
+    <string name="title_history">ചരിത്രം</string>
+    <string name="title_settings">ക്രമീകരണങ്ങൾ</string>
+    <string name="title_media_studio">ക്രിയേറ്റീവ് സ്റ്റുഡിയോ</string>
+    <string name="title_video_editor">വീഡിയോ എഡിറ്റർ</string>
+    <string name="title_creations">സൃഷ്ടികൾ</string>
+    <string name="title_video_player">വീഡിയോ പ്ലെയർ</string>
+    <string name="title_music_player">മ്യൂസിക് പ്ലെയർ</string>
+    <string name="title_system_health">സിസ്റ്റം ഹെൽത്ത്</string>
+    <string name="title_text_to_audio">ടെക്സ്റ്റ് ടു ഓഡിയോ</string>
+    <string name="title_file_transfer">ഫാസ്റ്റ് ഷെയർ</string>
+    <string name="title_support_bot">സ്വരാ ബോട്ട്</string>
+    <string name="title_smart_price_hub">സ്മാർട്ട് പ്രൈസ് ഹബ്</string>
+    <string name="title_app_manager">ആപ്പ് മാനേജർ</string>
+
+    <string name="label_dark_mode">ഡാർക്ക് മോഡ്</string>
+    <string name="label_display_language">ആപ്പ് ഡിസ്പ്ലേ ഭാഷ</string>
+    <string name="label_pin_tools">ടൂളുകൾ മുകളിൽ പിൻ ചെയ്യുക</string>
+    <string name="label_recent_updates">സമീപകാല അപ്‌ഡേറ്റുകൾ</string>
+    <string name="label_calculation_history">കണക്കുകൂട്ടൽ ചരിത്രം</string>
+    <string name="label_no_history">ചരിത്രമൊന്നുമില്ല</string>
+</resources>
