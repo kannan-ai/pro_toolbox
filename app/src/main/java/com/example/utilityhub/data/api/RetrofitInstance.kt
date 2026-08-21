@@ -7,6 +7,7 @@ object RetrofitInstance {
     private const val TRANSLATE_BASE_URL = "https://translate.googleapis.com/"
     private const val DATAMUSE_BASE_URL = "https://api.datamuse.com/"
     private const val CURRENCY_BASE_URL = "https://open.er-api.com/v6/"
+    private const val GITHUB_BASE_URL = "https://api.github.com/"
 
     val translationApi: TranslationApi by lazy {
         Retrofit.Builder()
@@ -30,5 +31,13 @@ object RetrofitInstance {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(CurrencyApi::class.java)
+    }
+
+    val updateApi: UpdateApi by lazy {
+        Retrofit.Builder()
+            .baseUrl(GITHUB_BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(UpdateApi::class.java)
     }
 }

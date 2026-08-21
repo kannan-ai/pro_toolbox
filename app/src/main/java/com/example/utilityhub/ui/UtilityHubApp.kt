@@ -116,6 +116,8 @@ fun UtilityHubApp(
     var calcExpanded by remember { mutableStateOf(true) }
     var securityExpanded by remember { mutableStateOf(true) }
 
+    var showUpdateDialog by remember { mutableStateOf(false) }
+
     // Handle Global Wake Word Navigation
     LaunchedEffect(triggerOpenBot) {
         if (triggerOpenBot && isSwaraEnabled) {
@@ -205,7 +207,7 @@ fun UtilityHubApp(
                     }
 
                     // 3. Compact System Footer
-                    DrawerFooter(currentRoute, navController, drawerState, scope)
+                    DrawerFooter(currentRoute, navController, drawerState, scope, onUpdateClick = { showUpdateDialog = true })
                 }
             }
         }
@@ -478,6 +480,96 @@ fun UtilityHubApp(
             }
         }
     }
+
+    if (showUpdateDialog) {
+        UpdateHubDialog(onDismiss = { showUpdateDialog = false })
+    }
+}
+
+@Composable
+fun UpdateHubDialog(onDismiss: () -> Unit) {
+    val context = androidx.compose.ui.platform.LocalContext.current
+    var isChecking by remember { mutableStateOf(true) }
+    var updateInfo by remember { mutableStateOf<com.example.utilityhub.data.api.GitHubRelease?>(null) }
+    var error by remember { mutableStateOf<String?>(null) }
+
+    LaunchedEffect(Unit) {
+        try {
+            val latest = com.example.utilityhub.data.api.RetrofitInstance.updateApi.getLatestRelease()
+            updateInfo = latest
+        } catch (e: Exception) {
+            error = e.message
+        } finally {
+            isChecking = false
+        }
+    }
+
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        modifier = Modifier.widthIn(max = 560.dp),
+        title = {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Icon(Icons.Default.SystemUpdate, null, tint = com.example.utilityhub.ui.theme.PrimaryAmber)
+                Spacer(Modifier.width(12.dp))
+                Text("System Update", fontWeight = FontWeight.Bold)
+            }
+        },
+        text = {
+            Column(modifier = Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+                if (isChecking) {
+                    Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.fillMaxWidth().padding(24.dp)) {
+                        CircularProgressIndicator(color = com.example.utilityhub.ui.theme.PrimaryAmber)
+                        Spacer(Modifier.height(16.dp))
+                        Text("Scanning GitHub for releases...", style = MaterialTheme.typography.bodySmall, color = Color.Gray)
+                    }
+                } else if (updateInfo != null) {
+                    val currentVersion = "2.3.0"
+                    val isNewer = updateInfo!!.tagName.contains(currentVersion).not() // Simple check
+                    
+                    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                        Text(
+                            if (isNewer) "New Version Available!" else "You're up to date!",
+                            fontWeight = FontWeight.Bold,
+                            color = if (isNewer) com.example.utilityhub.ui.theme.PrimaryAmber else Color(0xFF4CAF50)
+                        )
+                        Text("Current: v$currentVersion", style = MaterialTheme.typography.labelSmall, color = Color.Gray)
+                        Text("Latest: ${updateInfo!!.tagName}", style = MaterialTheme.typography.labelSmall, color = Color.Gray)
+                        
+                        HorizontalDivider(color = Color.White.copy(alpha = 0.1f))
+                        
+                        Text("Changelog:", fontWeight = FontWeight.Bold, style = MaterialTheme.typography.bodySmall)
+                        Text(
+                            updateInfo!!.body,
+                            style = MaterialTheme.typography.bodySmall,
+                            maxLines = 5,
+                            overflow = TextOverflow.Ellipsis,
+                            color = Color.Gray
+                        )
+                    }
+                } else {
+                    Text("Could not connect to GitHub. Please check your internet connection.", color = MaterialTheme.colorScheme.error)
+                }
+            }
+        },
+        confirmButton = {
+            if (updateInfo != null) {
+                Button(
+                    onClick = {
+                        val intent = android.content.Intent(android.content.Intent.ACTION_VIEW, android.net.Uri.parse(updateInfo!!.htmlUrl))
+                        context.startActivity(intent)
+                    },
+                    colors = ButtonDefaults.buttonColors(containerColor = com.example.utilityhub.ui.theme.PrimaryAmber)
+                ) {
+                    Text("View on GitHub")
+                }
+            }
+        },
+        dismissButton = {
+            TextButton(onClick = onDismiss) { Text("Close") }
+        },
+        containerColor = MaterialTheme.colorScheme.surface,
+        shape = RoundedCornerShape(24.dp)
+    )
 }
 
 @Composable
@@ -601,7 +693,8 @@ fun DrawerFooter(
     currentRoute: String?,
     navController: androidx.navigation.NavController,
     drawerState: DrawerState,
-    scope: kotlinx.coroutines.CoroutineScope
+    scope: kotlinx.coroutines.CoroutineScope,
+    onUpdateClick: () -> Unit
 ) {
     Surface(
         color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.2f),
@@ -622,12 +715,12 @@ fun DrawerFooter(
                     scope.launch { drawerState.close() }
                 }
                 FooterLink(Icons.Default.SystemUpdate, "Update", false) {
-                    // Check update logic
+                    onUpdateClick()
                 }
             }
             Spacer(Modifier.height(12.dp))
             Text(
-                "v2.1.0 • Private P2P • No Ads",
+                "v2.3.0 • Private P2P • No Ads",
                 modifier = Modifier.fillMaxWidth(),
                 textAlign = TextAlign.Center,
                 style = MaterialTheme.typography.labelSmall,

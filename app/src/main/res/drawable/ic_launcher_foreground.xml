@@ -4,20 +4,19 @@
     android:viewportWidth="108"
     android:viewportHeight="108">
 
-    <!-- Stylized White Symbol - Exact reconstruction from image -->
+    <!-- Stylized 'S' Ribbon (Complicated Shape) -->
     <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M25,22h58v8h-58z" />
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="8"
+        android:strokeLineCap="round"
+        android:pathData="M80,35 a26,26 0 0 0 -52,0 c0,13 39,13 39,39 a26,26 0 0 1 -52,0" />
 
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M25,36c0,0 20,-2 25,0s8,5 8,10s-5,10 -15,10h-5c-5,0 -8,-2 -8,-6s3,-6 8,-6h10c3,0 5,2 5,4s-2,4 -5,4h-10v-3h8c1,0 2,-1 2,-2s-1,-2 -2,-2h-12c-8,0 -12,4 -12,10s4,12 12,12h35v-8h-25c-5,0 -8,-2 -8,-6s3,-6 8,-6h10c8,0 12,-4 12,-10s-4,-12 -12,-12z" />
+        android:pathData="M76,35 a22,22 0 0 0 -44,0 c0,11 33,11 33,33 a22,22 0 0 1 -44,0" />
 
+    <!-- 'New Beginning' Sparkle -->
     <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M35,66h45v8h-35c-5,0 -8,4 -8,8s3,8 8,8h25v-6h-15c-1,0 -2,-1 -2,-2s1,-2 2,-2h20v14h-45c-8,0 -12,-4 -12,-10s4,-12 12,-12z" />
-
-    <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M25,22h6v68h-6z" />
+        android:fillColor="#FFD700"
+        android:pathData="M85,25 l3,9 l9,3 l-9,3 l-3,9 l-3,-9 l-9,-3 l9,-3 z"/>
 </vector>

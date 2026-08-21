@@ -13,13 +13,25 @@
                 android:endX="512"
                 android:endY="512"
                 android:type="linear">
-                <item android:offset="0" android:color="#FFFF9800"/>
-                <item android:offset="1" android:color="#FF9C27B0"/>
+                <item android:offset="0" android:color="#FF6200EE"/>
+                <item android:offset="1" android:color="#FF03DAC5"/>
             </gradient>
         </aapt:attr>
     </path>
-    <!-- Simplified stylized logo path approximation -->
+
+    <!-- Complicated 'S' Shape (Modern Ribbon/Shard) -->
+    <path
+        android:fillColor="#80FFFFFF"
+        android:pathData="M380,180 a120,120 0 0 0 -240,0 c0,60 180,60 180,180 a120,120 0 0 1 -240,0"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="20"/>
+
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M140,160h232v60h-232z M140,260h232v110h-70v-50h-92v50h-70z"/>
+        android:pathData="M360,180 a100,100 0 0 0 -200,0 c0,50 160,50 160,160 a100,100 0 0 1 -200,0" />
+
+    <!-- Geometric 'New Beginning' Spark -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M400,120 l10,30 l30,10 l-30,10 l-10,30 l-10,-30 l-30,-10 l30,-10 z"/>
 </vector>

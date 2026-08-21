@@ -10,12 +10,12 @@
         <aapt:attr name="android:fillColor">
             <gradient
                 android:startX="0"
-                android:startY="54"
+                android:startY="0"
                 android:endX="108"
-                android:endY="54"
+                android:endY="108"
                 android:type="linear">
-                <item android:offset="0" android:color="#FFE65100"/> <!-- Vibrant Orange -->
-                <item android:offset="1" android:color="#FF7B1FA2"/> <!-- Deep Purple -->
+                <item android:offset="0" android:color="#FF6200EE"/> <!-- Deep Purple -->
+                <item android:offset="1" android:color="#FF03DAC5"/> <!-- Bright Cyan -->
             </gradient>
         </aapt:attr>
     </path>
