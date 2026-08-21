@@ -60,18 +60,17 @@ import com.example.utilityhub.navigation.allScreens
 import com.example.utilityhub.data.db.SwaraDao
 import kotlinx.coroutines.launch
 
-val EliteGradient = Brush.linearGradient(
+val EliteGradient = Brush.verticalGradient(
     colors = listOf(
-        Color(0xFFFFD700).copy(alpha = 0.2f), // Gold
-        Color(0xFFFF8C00).copy(alpha = 0.1f)  // Dark Orange
+        Color(0xFF121212), // Deep Pitch Black
+        Color(0xFF1E1E1E)  // Soft Dark Gray
     )
 )
 
-fun Modifier.glassmorphism(radius: Dp = 15.dp): Modifier = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-    this.blur(radius)
-} else {
-    this.background(Color.White.copy(alpha = 0.05f))
-}
+fun Modifier.glassmorphism(): Modifier = this.background(
+    color = Color.White.copy(alpha = 0.05f),
+    shape = RoundedCornerShape(12.dp)
+)
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -146,18 +145,23 @@ fun UtilityHubApp(
 
     ModalNavigationDrawer(
         drawerState = drawerState,
+        scrimColor = Color.Black.copy(alpha = 0.7f),
         gesturesEnabled = currentRoute != Screen.VideoPlayer.route && 
                          currentRoute != Screen.MusicPlayer.route,
         drawerContent = {
             ModalDrawerSheet(
-                drawerContainerColor = Color.Transparent,
-                drawerTonalElevation = 0.dp,
+                drawerContainerColor = MaterialTheme.colorScheme.surface,
+                drawerTonalElevation = 4.dp,
                 modifier = Modifier
                     .width(300.dp)
-                    .background(EliteGradient)
-                    .glassmorphism()
+                    .fillMaxHeight(),
+                windowInsets = WindowInsets.systemBars
             ) {
-                Column(modifier = Modifier.fillMaxSize()) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(EliteGradient)
+                ) {
                     // 1. Compact Header
                     DrawerHeader()
                     
